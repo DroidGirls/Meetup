@@ -1,6 +1,5 @@
 # RecyclerView 課題
 
-http://yaraki.github.io/slides/droidgirls-201611/#1
 
 ```
     compile 'com.android.support:recyclerview-v7:25.1.0'
@@ -87,9 +86,9 @@ http://yaraki.github.io/slides/droidgirls-201611/#1
 * https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html#notifyItemRangeInserted(int, int)
 * https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html#notifyItemRangeRemoved(int, int)
 
-* ボタンをタップしたらアイテムが追加されるようにしてみよう
+* ボタンをタップしたらランダムな位置にアイテムが追加されるようにしてみよう
 
-<img src="device-2016-11-16-144920.png" width="270">
+<img src="device-2016-12-21-085052.png" width="270">
 
 
 
