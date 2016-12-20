@@ -28,7 +28,7 @@
 <img src="device-2016-12-21-082832.png" width="270">
 
 * 10で割り切れる位置のアイテムは横いっぱいに広がるようにしてみよう
- * ヒント : https://developer.android.com/reference/android/support/v7/widget/GridLayoutManager.html#setSpanSizeLookup(android.support.v7.widget.GridLayoutManager.SpanSizeLookup)
+* ヒント : https://developer.android.com/reference/android/support/v7/widget/GridLayoutManager.html#setSpanSizeLookup(android.support.v7.widget.GridLayoutManager.SpanSizeLookup)
 
 <img src="device-2016-12-21-083014.png" width="270">
 
