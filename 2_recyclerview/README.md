@@ -1,5 +1,6 @@
 # RecyclerView 課題
 
+http://www.slideshare.net/yanzm/droidgirls-recyclerview
 
 ```
     compile 'com.android.support:recyclerview-v7:25.1.0'
@@ -97,5 +98,7 @@
 
 * getItemViewType() を Override して Header と Footer をつけてみよう
 
+<img src="device-2016-12-21-185441.png" width="270">
+<img src="device-2016-12-21-185503.png" width="270">
 
 
