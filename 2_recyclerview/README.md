@@ -1,6 +1,6 @@
 # RecyclerView 課題
 
-http://www.slideshare.net/yanzm/droidgirls-recyclerview
+https://speakerdeck.com/yanzm/droidgirls-recyclerview
 
 ```
     compile 'com.android.support:recyclerview-v7:25.1.0'
