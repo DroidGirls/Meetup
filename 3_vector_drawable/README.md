@@ -31,3 +31,21 @@ https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
   * ヒント : `DrawableCompat.setTint()` https://developer.android.com/reference/android/support/v4/graphics/drawable/DrawableCompat.html
 
 <img src="images/device-2017-01-25-vector_drawale.png" width="270">
+
+
+## AnimatedVectorDrawable
+
+* https://developer.android.com/reference/android/graphics/drawable/AnimatedVectorDrawable.html
+
+* ImageViewのアイコンを回転させてみよう
+* ImageViewのアイコンの色を変えてみよう
+* アニメーションのInterpolatorを変更してみよう
+* アニメーションのdurationを変更してみよう
+
+
+## AndroidIconAnimator
+
+* https://romannurik.github.io/AndroidIconAnimator/
+
+* 回転するアニメーションを作ってみよう
+* パスが変わるアニメーションを作ってみよう
