@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         imgPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startAnimation(imgPlay, R.drawable.avd_play_to_pause, R.drawable.avd_pause_to_play);
+                startAnimation(imgPlay, R.drawable.avd_play_to_pause_new, R.drawable.avd_pause_to_play_new);
             }
         });
     }
