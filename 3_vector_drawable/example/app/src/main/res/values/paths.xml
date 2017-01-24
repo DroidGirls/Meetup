@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="path_play">
+        M38,24
+        L38,24
+        L16,24
+        L16,10
+        z
+        M38,24
+        L38,24
+        L16,38
+        L16,24
+        z
+    </string>
+
+    <string name="path_pause">
+        M12,10
+        L20,10
+        L20,38
+        L12,38
+        z
+        M28,10
+        L36,10
+        L36,38
+        L28,38
+        z
+    </string>
+
+</resources>
