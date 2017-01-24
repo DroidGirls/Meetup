@@ -8,10 +8,16 @@
             android:height="48dp"
             android:viewportHeight="48.0"
             android:viewportWidth="48.0">
-            <path
-                android:name="play"
-                android:fillColor="#000000"
-                android:pathData="@string/path_play" />
+            <group
+                android:name="rotationGroup"
+                android:pivotX="24.0"
+                android:pivotY="24.0"
+                android:rotation="360.0">
+                <path
+                    android:name="play"
+                    android:fillColor="#000000"
+                    android:pathData="@string/path_play" />
+            </group>
         </vector>
     </aapt:attr>
 
@@ -19,12 +25,25 @@
         <aapt:attr name="android:animation">
             <set xmlns:android="http://schemas.android.com/apk/res/android">
                 <objectAnimator
-                    android:duration="200"
+                    android:duration="@integer/vector_animation_mills"
                     android:interpolator="@android:anim/decelerate_interpolator"
                     android:propertyName="pathData"
                     android:valueFrom="@string/path_play"
                     android:valueTo="@string/path_pause"
                     android:valueType="pathType" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="rotationGroup">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android">
+                <objectAnimator
+                    android:duration="@integer/vector_animation_mills"
+                    android:interpolator="@android:anim/decelerate_interpolator"
+                    android:propertyName="rotation"
+                    android:valueFrom="360"
+                    android:valueTo="0" />
             </set>
         </aapt:attr>
     </target>

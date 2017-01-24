@@ -68,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
             // 次にタップしたら逆方向のアニメーションを実行するためにselect状態を切り替える
             imageView.setSelected(!imageView.isSelected());
+        } else {
+            int drawableResId = imageView.isSelected() ? activeResId : inactiveResId;
+            imageView.setImageResource(drawableResId);
+            imageView.setSelected(!imageView.isSelected());
         }
     }
 

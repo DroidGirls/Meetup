@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="200"
+    android:duration="@integer/vector_animation_mills"
     android:interpolator="@android:anim/decelerate_interpolator"
     android:propertyName="pathData"
     android:valueFrom="@string/path_pause"
