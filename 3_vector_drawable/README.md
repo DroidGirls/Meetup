@@ -16,3 +16,18 @@ https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
 * local svg file をインポートしてみよう（cat.svgを用意してあります）
 
 <img src="images/device-2017-01-25-vector_asset_studio.png" width="270">
+
+
+## VectorDrawable
+
+* https://developer.android.com/reference/android/graphics/drawable/VectorDrawable.html
+
+* ImageViewに表示してみよう
+* TextViewの左側に表示してみよう
+* 色を変えてみよう
+* 45度回転させてみよう
+  * ヒント : `<group>` タグ
+* TextViewにセットしたVectorDrawableにtintをあててみよう
+  * ヒント : `DrawableCompat.setTint()` https://developer.android.com/reference/android/support/v4/graphics/drawable/DrawableCompat.html
+
+<img src="images/device-2017-01-25-vector_drawale.png" width="270">
