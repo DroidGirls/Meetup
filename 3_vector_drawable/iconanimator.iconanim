@@ -1,0 +1,93 @@
+{
+  "artwork": {
+    "id": "vector",
+    "canvasColor": null,
+    "width": 48,
+    "height": 48,
+    "alpha": 1,
+    "layers": [
+      {
+        "id": "group",
+        "type": "group",
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "pivotX": 0,
+        "pivotY": 0,
+        "translateX": 0,
+        "translateY": 0,
+        "layers": [
+          {
+            "id": "path",
+            "type": "path",
+            "pathData": "M38,24         L38,24         L16,24         L16,10         z         M38,24         L38,24         L16,38         L16,24         z",
+            "fillColor": "#000000",
+            "fillAlpha": 1,
+            "strokeColor": "",
+            "strokeAlpha": 1,
+            "strokeWidth": 0,
+            "strokeLinecap": "butt",
+            "strokeLinejoin": "miter",
+            "strokeMiterLimit": 4,
+            "trimPathStart": 0,
+            "trimPathEnd": 1,
+            "trimPathOffset": 0
+          }
+        ]
+      }
+    ]
+  },
+  "animations": [
+    {
+      "id": "anim",
+      "duration": 900,
+      "blocks": [
+        {
+          "layerId": "group",
+          "propertyName": "rotation",
+          "fromValue": 0,
+          "toValue": 360,
+          "startTime": 200,
+          "endTime": 700,
+          "interpolator": "ACCELERATE_DECELERATE"
+        },
+        {
+          "layerId": "group",
+          "propertyName": "pivotX",
+          "fromValue": 24,
+          "toValue": 24,
+          "startTime": 200,
+          "endTime": 700,
+          "interpolator": "ACCELERATE_DECELERATE"
+        },
+        {
+          "layerId": "group",
+          "propertyName": "pivotY",
+          "fromValue": 24,
+          "toValue": 24,
+          "startTime": 200,
+          "endTime": 700,
+          "interpolator": "ACCELERATE_DECELERATE"
+        },
+        {
+          "layerId": "path",
+          "propertyName": "fillColor",
+          "fromValue": "#000000",
+          "toValue": "#ff4081",
+          "startTime": 200,
+          "endTime": 700,
+          "interpolator": "ACCELERATE_DECELERATE"
+        },
+        {
+          "layerId": "path",
+          "propertyName": "pathData",
+          "fromValue": "M38,24         L38,24         L16,24         L16,10         z         M38,24         L38,24         L16,38         L16,24         z",
+          "toValue": "M12,10         L20,10         L20,38         L12,38         z         M28,10         L36,10         L36,38         L28,38         z",
+          "startTime": 200,
+          "endTime": 700,
+          "interpolator": "ACCELERATE_DECELERATE"
+        }
+      ]
+    }
+  ]
+}
