@@ -3,8 +3,8 @@
 https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
 
 ```
-    compile "com.android.support:support-vector-drawable:v7:25.1.0"
-    compile "com.android.support:animated-vector-drawable:v7:25.1.0"
+    compile "com.android.support:support-vector-drawable:25.1.0"
+    compile "com.android.support:animated-vector-drawable:25.1.0"
 ```
 
 
