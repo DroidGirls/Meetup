@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="48dp"
+            android:height="48dp"
+            android:viewportHeight="48.0"
+            android:viewportWidth="48.0">
+            <group
+                android:name="rotationGroup"
+                android:pivotX="24.0"
+                android:pivotY="24.0"
+                android:rotation="360.0">
+                <path
+                    android:name="play"
+                    android:fillColor="#000000"
+                    android:pathData="@string/path_play" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="play">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android">
+                <objectAnimator
+                    android:duration="@integer/vector_animation_mills"
+                    android:interpolator="@android:anim/decelerate_interpolator"
+                    android:propertyName="pathData"
+                    android:valueFrom="@string/path_play"
+                    android:valueTo="@string/path_pause"
+                    android:valueType="pathType" />
+                <objectAnimator
+                    android:duration="@integer/vector_animation_mills"
+                    android:interpolator="@android:anim/decelerate_interpolator"
+                    android:propertyName="fillColor"
+                    android:valueFrom="#000000"
+                    android:valueTo="@color/colorAccent" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="rotationGroup">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android">
+                <objectAnimator
+                    android:duration="@integer/vector_animation_mills"
+                    android:interpolator="@android:anim/decelerate_interpolator"
+                    android:propertyName="rotation"
+                    android:valueFrom="360"
+                    android:valueTo="0" />
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>
