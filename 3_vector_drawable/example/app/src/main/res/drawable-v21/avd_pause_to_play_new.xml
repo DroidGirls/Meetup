@@ -31,6 +31,12 @@
                     android:valueFrom="@string/path_pause"
                     android:valueTo="@string/path_play"
                     android:valueType="pathType" />
+                <objectAnimator
+                    android:duration="@integer/vector_animation_mills"
+                    android:interpolator="@android:anim/decelerate_interpolator"
+                    android:propertyName="fillColor"
+                    android:valueFrom="@color/colorAccent"
+                    android:valueTo="#000000" />
             </set>
         </aapt:attr>
     </target>
