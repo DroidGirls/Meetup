@@ -30,7 +30,7 @@ https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
 * TextViewにセットしたVectorDrawableにtintをあててみよう
   * ヒント : `DrawableCompat.setTint()` https://developer.android.com/reference/android/support/v4/graphics/drawable/DrawableCompat.html
 
-<img src="images/device-2017-01-25-vector_drawale.png" width="270">
+<img src="images/device-2017-01-25-vector_drawable.jpg" width="270">
 
 
 ## AnimatedVectorDrawable
