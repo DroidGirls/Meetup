@@ -15,7 +15,7 @@ https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
 * material icon をインポートしてみよう
 * local svg file をインポートしてみよう（cat.svgを用意してあります）
 
-<img src="images/device-2017-01-25-vector_asset_studio.png" width="270">
+<img src="images/device-2017-01-25-vector_asset_studio.png" width="600">
 
 
 ## VectorDrawable
@@ -42,10 +42,14 @@ https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
 * アニメーションのInterpolatorを変更してみよう
 * アニメーションのdurationを変更してみよう
 
+<img src="images/device-2017-01-25-animated_vector_drawable.gif" width="270">
+
 
 ## AndroidIconAnimator
 
 * https://romannurik.github.io/AndroidIconAnimator/
 
 * 回転するアニメーションを作ってみよう
-* パスが変わるアニメーションを作ってみよう
+* パスが変形するアニメーションを作ってみよう
+
+<img src="images/device-2017-01-25-android_icon_animator.gif" width="600">
