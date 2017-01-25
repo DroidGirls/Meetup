@@ -53,3 +53,20 @@ https://speakerdeck.com/konifar/vectordrawable-and-animatedvectordrawable
 * パスが変形するアニメーションを作ってみよう
 
 <img src="images/device-2017-01-25-android_icon_animator.gif" width="600">
+
+
+# 参考資料
+## VectorDrawable
+- SVGの仕様 https://www.w3.org/TR/SVG/
+- VectorAssetStudio https://developer.android.com/studio/write/vector-asset-studio.html
+- VectorDrawableのパフォーマンス最適化の記事 https://upday.github.io/blog/vector_drawables_optimisation/
+- VectorDrawable対応まとめ http://qiita.com/konifar/items/bf581b8f23dea7b30f85
+- VectorDrawableをPullRequest上でプレビューしてくれるChrome Extension https://github.com/jmatsu/vector-drawable-previewer
+- SupportVectorDrawableの導入解説記事 https://android-developers.googleblog.com/2016/02/android-support-library-232.html
+- SupportVectorDrawableがどう動くか内部を解説した記事 http://qiita.com/takahirom/items/c6f5a3204210d1e95c70
+
+## AnimatedVectorDrawable
+- AnimatedVectorDrawable https://developer.android.com/reference/android/graphics/drawable/AnimatedVectorDrawable.html
+- PathMorphingできるようにPathを整形してくれるGUIツール https://github.com/bonnyfone/vectalign
+- Web上でAnimatedVectorDrawableを作れるAndroidIconAnimator https://romannurik.github.io/AndroidIconAnimator/
+- AnimatedVectorDrawableをふんだんに使って作られたアプリPlaid https://github.com/nickbutcher/plaid
