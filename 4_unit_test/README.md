@@ -2,13 +2,13 @@
 
 ## JUnit4 でテストを書いてみよう
 
-```
+```java
 testCompile 'junit:junit:4.12'
 ```
 
 以下の仕様を満たすように TimeFormatter.format() を実装し、それをテストしよう
 
-```
+```java
 public class TimeFormatter {
     
     public static String format(int seconds) {
@@ -34,7 +34,7 @@ public class TimeFormatter {
 
 次のようなインタフェースとクラスがあります。
 
-```
+```java
 public interface Repository {
 
     User getUserA();
@@ -43,7 +43,7 @@ public interface Repository {
 }
 ```
 
-```
+```java
 public class UserService {
 
     private final Repository repository;
@@ -66,8 +66,9 @@ Repository を mockito でモックし、UserService.getUser() で isTarget が 
 
 #### ヒント
 
-```
+```java
 Mockito.mock(Repository.class);
+
 Mockito.verify(repository).getUserA();
 ```
 
@@ -76,7 +77,7 @@ Mockito.verify(repository).getUserA();
 
 次のようなクラスがあります。
 
-```
+```java
 public class TargetDiscriminator {
 
     private final Random random = new Random();
@@ -87,7 +88,7 @@ public class TargetDiscriminator {
 }
 ```
 
-```
+```java
 public class UserService2 {
 
     private final Repository repository;
@@ -112,7 +113,7 @@ TargetDiscriminator をモック化し、TargetDiscriminator.isTarget() の値�
 
 #### ヒント
 
-```
+```java
 Mockito.mock(TargetDiscriminator.class);
 
 Mockito.when(targetDiscriminator.isTarget()).thenReturn(...);
@@ -126,7 +127,7 @@ Mockito.when(targetDiscriminator.isTarget()).thenReturn(...);
 
 次のようなクラスがあります。
 
-```
+```java
 public class UserService3 {
 
     private final Repository repository;
@@ -154,9 +155,8 @@ UserService3 のインスタンスを spy() して、isTarget() が呼ばれた�
 
 ヒント
 
-```
+```java
 UserService3 userService3 = spy(new UserService3(repository));
-
 ```
 
 
@@ -169,7 +169,7 @@ UserService3 userService3 = spy(new UserService3(repository));
 
 ### TextUtils.isEmpty() を使ったコードのテストを書いてみよう
 
-```
+```java
 testCompile 'org.robolectric:robolectric:3.3.1'
 ```
 
@@ -190,7 +190,7 @@ testCompile 'org.robolectric:robolectric:3.3.1'
 
 次のようなクラスがあります
 
-```
+```java
 public class Instruction {
 
     private static final String KEY = "instruction_is_finished";
@@ -220,7 +220,7 @@ public class Instruction {
 
 次のようなクラスがあります。
 
-```
+```java
 public class Cat implements Parcelable {
 
     private final String name;
@@ -265,7 +265,7 @@ public class Cat implements Parcelable {
 
 このクラスに対する以下のテストがあります。
 
-```
+```java
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class CatTest {
