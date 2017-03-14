@@ -232,13 +232,11 @@ public class Cat implements Parcelable {
     }
 
     private Cat(Parcel in) {
-        name = in.readString();
-        age = in.readInt();
+        // TODO: 実装
     }
 
     public void writeToParcel(Parcel out, int flags) {
-        out.writeString(name);
-        out.writeInt(age);
+        // TODO: 実装
     }
 
     public int describeContents() {
