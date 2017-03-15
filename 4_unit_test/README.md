@@ -1,5 +1,10 @@
 # Unit Test 課題
 
+## 資料
+
+[資料](droid_girls_unit_test.pdf)
+
+
 ## JUnit4 でテストを書いてみよう
 
 ```java
