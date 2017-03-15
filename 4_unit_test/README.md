@@ -29,11 +29,11 @@ public class TimeFormatter {
 }
 ```
 
-* seconds が0以下のときは "" を返す
-* seconds が1分未満のときは、"<seconds>秒前" を返す
-* seconds が1分以上1時間未満のときは、"<minutes>分前" を返す
-* seconds が1時間以上1日未満のときは "<hour>時間前" を返す
-* seconds が1日以上のときは "<day>日前" を返す
+* seconds が0以下のときは "" を返
+* seconds が1分未満のときは、"[seconds]秒前" を返す
+* seconds が1分以上1時間未満のときは、"[minutes]分前" を返す
+* seconds が1時間以上1日未満のときは "[hour]時間前" を返す
+* seconds が1日以上のときは "[day]日前" を返す
 
 
 59, 60, 61 など境界になるところをテストしよう。
@@ -193,10 +193,6 @@ testCompile 'org.robolectric:robolectric:3.3.1'
 
 ### TextUtils.isEmpty() を使ったコードのテストを書いてみよう
 
-```java
-testCompile 'org.robolectric:robolectric:3.3.1'
-```
-
 以下の仕様を満たす User クラスを実装し、それをテストしよう
 
 * setFirstName() で first name をセットできる
@@ -208,7 +204,16 @@ testCompile 'org.robolectric:robolectric:3.3.1'
 * first name が空で last name が空ではないときは、getName() は " <last name>" ではなく "<last name>" を返す
 * first name も last name も空のときは、getName() は " " ではなく "" を返す
 
+#### ヒント
 
+```java
+        final User user = new User();
+        user.setFirstName("Yuki");
+        user.setLastName("Anzai");
+        assertEquals("Yuki", user.getFirstName());
+        assertEquals("Anzai", user.getLastName());
+        assertEquals("Yuki Anzai", user.getName());
+```
 
 ### SharedPreferences を使ったコードのテストを書いてみよう
 
@@ -238,6 +243,11 @@ public class Instruction {
 * 最初の状態では Instruction.isFinished() は false
 * setFinished() を呼んだら Instruction.isFinished() は true
 
+#### ヒント
+
+```java
+final Context context = RuntimeEnvi
+```
 
 
 ### Parcelable のテストを書いてみよう
