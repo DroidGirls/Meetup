@@ -41,7 +41,7 @@ public class TimeFormatter {
 #### ヒント
 
 ```java
-assertEquals(TimeFormatter.format(-1), "");
+assertEquals("", TimeFormatter.format(-1));
 ```
 
 ## Mockito
