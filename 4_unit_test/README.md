@@ -4,8 +4,14 @@
 
 [資料](droid_girls_unit_test.pdf)
 
+## JUnit4
 
-## JUnit4 でテストを書いてみよう
+### JUnit4 のテストを実行してみよう
+
+Android Studio で新しいプロジェクトを作ると、ExampleUnitTest というクラスが自動で作られます
+まずはこのクラスをそのまま実行して、2 + 2 が 4 になることをテストしよう
+
+### JUnit4 でテストを書いてみよう
 
 ```java
 testCompile 'junit:junit:4.12'
@@ -31,6 +37,11 @@ public class TimeFormatter {
 
 59, 60, 61 など境界になるところをテストしよう。
 
+#### ヒント
+
+```java
+assertEquals(TimeFormatter.format(-1), "");
+```
 
 
 ## Mockito
