@@ -246,7 +246,7 @@ public class Instruction {
 #### ヒント
 
 ```java
-final Context context = RuntimeEnvi
+final Context context = RuntimeEnvironment.application;
 ```
 
 
