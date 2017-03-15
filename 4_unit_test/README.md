@@ -16,6 +16,9 @@ Android Studio で新しいプロジェクトを作ると、ExampleUnitTest と�
 
 まずはこのクラスをそのまま実行して、2 + 2 が 4 になることをテストしよう
 
+
+
+
 ### JUnit4 でテストを書いてみよう
 
 以下の仕様を満たすように TimeFormatter.format() を実装し、それをテストしよう
@@ -43,6 +46,9 @@ public class TimeFormatter {
 ```java
 assertEquals("", TimeFormatter.format(-1));
 ```
+
+
+
 
 ## Mockito
 
@@ -215,6 +221,10 @@ testCompile 'org.robolectric:robolectric:3.3.1'
         assertEquals("Yuki Anzai", user.getName());
 ```
 
+
+
+
+
 ### SharedPreferences を使ったコードのテストを書いてみよう
 
 次のようなクラスがあります
@@ -250,7 +260,7 @@ final Context context = RuntimeEnvironment.application;
 ```
 
 
-### Parcelable のテストを書いてみよう
+### Parcelable のテストが通るようにしよう
 
 次のようなクラスがあります。
 

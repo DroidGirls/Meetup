@@ -1,8 +1,10 @@
 # 回答サンプル
 
-## JUnit4 でテストを書いてみよう
+## JUnit4
 
-```
+### JUnit4 でテストを書いてみよう
+
+```java
 public class TimeFormatter {
 
     public static String format(int seconds) {
@@ -23,7 +25,7 @@ public class TimeFormatter {
 }
 ```
 
-```
+```java
 public class TimeFormatterTest {
 
     @Test
@@ -53,7 +55,7 @@ public class TimeFormatterTest {
 
 ### interface をモックしてみよう
 
-```
+```java
 public class UserServiceTest {
 
     @Test
@@ -72,7 +74,7 @@ public class UserServiceTest {
 
 ### class をモックしてみよう
 
-```
+```java
 public class UserServiceTest2 {
 
     @Test
@@ -96,7 +98,7 @@ public class UserServiceTest2 {
 ### インスタンスを spy してみよう
 
 
-```
+```java
 public class UserServiceTest3 {
 
     @Test
@@ -115,11 +117,14 @@ public class UserServiceTest3 {
 }
 ```
 
+
+
+
 ## Robolectric
 
 ### TextUtils.isEmpty() を使ったコードのテストを書いてみよう
 
-```
+```java
 public class User {
 
     private String firstName;
@@ -142,14 +147,16 @@ public class User {
     }
 
     public String getName() {
-        final boolean needSeparator = firstName != null && !firstName.isEmpty()
-                && lastName != null && !lastName.isEmpty();
+        final boolean needSeparator = !TextUtils.isEmpty(firstName)
+                && !.TextUtils.isEmpty(lastName);
         return firstName + (needSeparator ? " " : "") + lastName;
     }
 }
 ```
 
 ```
+@RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class)
 public class UserTest {
 
     @Test
@@ -194,3 +201,75 @@ public class UserTest {
 
 }
 ```
+
+
+### SharedPreferences を使ったコードのテストを書いてみよう
+
+```java
+@RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class)
+public class InstructionTest {
+
+    @Test
+    public void test() {
+        final Context context = RuntimeEnvironment.application;
+        assertThat(Instruction.isFinished(context)).isFalse();
+        TimeUnit.HOURS.toSeconds(1);
+
+        Mockito.mock(Cat.class);
+
+        Instruction.setFinished(context);
+        assertThat(Instruction.isFinished(context)).isTrue();
+    }
+}
+```
+
+
+### Parcelable のテストが通るようにしよう
+
+```java
+public class Cat implements Parcelable {
+
+    private final String name;
+    private final int age;
+
+    public Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    private Cat(Parcel in) {
+        name = in.readString();
+        age = in.readInt();
+    }
+
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeString(name);
+        out.writeInt(age);
+    }
+
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Parcelable.Creator<Cat> CREATOR = new Parcelable.Creator<Cat>() {
+        public Cat createFromParcel(Parcel in) {
+            return new Cat(in);
+        }
+
+        public Cat[] newArray(int size) {
+            return new Cat[size];
+        }
+    };
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+```
+
+
