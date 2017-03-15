@@ -6,6 +6,10 @@
 
 ## JUnit4
 
+```java
+testCompile 'junit:junit:4.12'
+```
+
 ### JUnit4 のテストを実行してみよう
 
 Android Studio で新しいプロジェクトを作ると、ExampleUnitTest というクラスが自動で作られます
@@ -13,10 +17,6 @@ Android Studio で新しいプロジェクトを作ると、ExampleUnitTest と�
 まずはこのクラスをそのまま実行して、2 + 2 が 4 になることをテストしよう
 
 ### JUnit4 でテストを書いてみよう
-
-```java
-testCompile 'junit:junit:4.12'
-```
 
 以下の仕様を満たすように TimeFormatter.format() を実装し、それをテストしよう
 
@@ -44,8 +44,11 @@ public class TimeFormatter {
 assertEquals(TimeFormatter.format(-1), "");
 ```
 
-
 ## Mockito
+
+```java
+testCompile 'org.mockito:mockito-core:2.7.17'
+```
 
 ### interface をモックしてみよう
 
@@ -183,6 +186,10 @@ UserService3 userService3 = spy(new UserService3(repository));
 
 
 ## Robolectric
+
+```java
+testCompile 'org.robolectric:robolectric:3.3.1'
+```
 
 ### TextUtils.isEmpty() を使ったコードのテストを書いてみよう
 
