@@ -197,6 +197,11 @@ UserService3 userService3 = spy(new UserService3(repository));
 testCompile 'org.robolectric:robolectric:3.3.1'
 ```
 
+```java
+@RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class)
+```
+
 ### TextUtils.isEmpty() を使ったコードのテストを書いてみよう
 
 以下の仕様を満たす User クラスを実装し、それをテストしよう
