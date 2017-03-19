@@ -148,7 +148,7 @@ public class User {
 
     public String getName() {
         final boolean needSeparator = !TextUtils.isEmpty(firstName)
-                && !.TextUtils.isEmpty(lastName);
+                && !TextUtils.isEmpty(lastName);
         return firstName + (needSeparator ? " " : "") + lastName;
     }
 }
@@ -215,8 +215,6 @@ public class InstructionTest {
         final Context context = RuntimeEnvironment.application;
         assertThat(Instruction.isFinished(context)).isFalse();
         TimeUnit.HOURS.toSeconds(1);
-
-        Mockito.mock(Cat.class);
 
         Instruction.setFinished(context);
         assertThat(Instruction.isFinished(context)).isTrue();
