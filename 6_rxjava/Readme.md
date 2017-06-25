@@ -61,7 +61,7 @@ adapter.setContributors(contributors)
 ## 課題 3. コントリビュータの氏名も表示してみよう
 このリストはGitHubのユーザーIDしか表示されません。別のGitHub APIを実行して、フルネームも取得してみましょう。
 
-![screenshot_1498403327](https://user-images.githubusercontent.com/6446183/27517231-1f4c8d2e-5a04-11e7-8b49-f48bc83e620f.png)
+<img width="30%" src="https://user-images.githubusercontent.com/6446183/27517231-1f4c8d2e-5a04-11e7-8b49-f48bc83e620f.png" />
 
 - ヒント1. `GitHubService#users()`メソッドを呼ぶと、ユーザーの詳細情報が取得できます
 - ヒント2. このような1つ1つのイベントから、新しいObservableを作るときに使うオペレータは何でしょうか？
