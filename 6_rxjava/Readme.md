@@ -50,7 +50,7 @@ adapter.setContributors(contributors)
 
 - ヒント1. `subscribe()`を呼ぶまでは通信は実行されません
 - ヒント2. `subscribeOn()`と`observeOn()`を使って実行スレッドをコントロールしましょう
-- ヒント3. Activityの`onDestroy()`時にDisposableの`dispose()`を呼ぶるのを忘れないように
+- ヒント3. Activityの`onDestroy()`時にDisposableの`dispose()`を呼ぶのを忘れないように
 
 ## 課題 2. 先頭の5名のコントリビュータだけ表示してみよう
 このAPIの結果の上位5件だけ表示してみてください。出来たらRxJavaのオペレータを使うと、この後の課題が楽になります。
@@ -72,6 +72,7 @@ adapter.setContributors(contributors)
 <img width="30%" src="https://user-images.githubusercontent.com/6446183/27517244-3dbd2962-5a04-11e7-9058-eda989d7fb1b.png"/>
 
 - ヒント1. combineLatestオペレータを使ってみましょう
+- ヒント2. RxBindingの[RxTextView#textChanges(android.widget.TextView)](https://static.javadoc.io/com.jakewharton.rxbinding2/rxbinding/2.0.0/com/jakewharton/rxbinding2/widget/RxTextView.html#textChanges-android.widget.TextView-)を調べてみましょう
 
 ## 発展課題 1. 連打に対応してみよう
 いまの実装ではLoadボタンを連打すると、連打した数だけリクエストが飛んでしまいます。連打されたときに最新以外のリクエストをキャンセルするにはどうしたら良いか考えてみてください。
