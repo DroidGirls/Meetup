@@ -75,7 +75,7 @@ adapter.setContributors(contributors)
 - ヒント2. RxBindingの[RxTextView#textChanges(android.widget.TextView)](https://static.javadoc.io/com.jakewharton.rxbinding2/rxbinding/2.0.0/com/jakewharton/rxbinding2/widget/RxTextView.html#textChanges-android.widget.TextView-)を調べてみましょう
 
 ## 発展課題 1. 連打に対応してみよう
-いまの実装ではLoadボタンを連打すると、連打した数だけリクエストが飛んでしまいます。連打されたときに最新以外のリクエストをキャンセルするにはどうしたら良いか考えてみてください。
+いまの実装ではLoadボタンを連打すると、連打した数だけonNextが実行されてしまいます。連打されたときに最新以外のリクエストに反応しないようにするにはどうしたら良いか考えてみてください。
 
 - ヒント1. 使うDisposableを工夫することで可能になります
 
