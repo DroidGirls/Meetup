@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import com.hkurokawa.rxjavaexample.databinding.ContributorsListItemBinding;
+import com.hkurokawa.rxjavaexample.databinding.ContributorsListItemFullnameBinding;
 import com.hkurokawa.rxjavaexample.network.GitHubService;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import io.reactivex.Observable;
@@ -106,7 +106,7 @@ public class MainActivity6 extends AppCompatActivity {
     @Override
     public ContributorsListItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
       return new ContributorsListItemViewHolder(
-          ContributorsListItemBinding.inflate(inflater, parent, false));
+          ContributorsListItemFullnameBinding.inflate(inflater, parent, false));
     }
 
     @Override public void onBindViewHolder(ContributorsListItemViewHolder holder, int position) {
@@ -126,9 +126,9 @@ public class MainActivity6 extends AppCompatActivity {
   }
 
   private static class ContributorsListItemViewHolder extends RecyclerView.ViewHolder {
-    private final ContributorsListItemBinding binding;
+    private final ContributorsListItemFullnameBinding binding;
 
-    public ContributorsListItemViewHolder(ContributorsListItemBinding binding) {
+    public ContributorsListItemViewHolder(ContributorsListItemFullnameBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
