@@ -17,9 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:text="@{contributor.login}"
+        android:text="@{contributor.name + ` (` + contributor.login + `)`}"
         android:textSize="16sp"
-        tools:text="johndoe"
+        tools:text="John Doe (johndoe)"
         />
   </LinearLayout>
 </layout>

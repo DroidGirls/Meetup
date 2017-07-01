@@ -5,12 +5,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import com.hkurokawa.rxjavaexample.databinding.ContributorsListItemBinding;
 import com.hkurokawa.rxjavaexample.network.GitHubService;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.disposables.Disposables;
+import io.reactivex.schedulers.Schedulers;
 import java.util.ArrayList;
 import java.util.List;
 import okhttp3.OkHttpClient;
@@ -19,14 +24,15 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
-  private static final String TAG = MainActivity.class.getSimpleName();
+public class MainActivity1 extends AppCompatActivity {
+  private static final String TAG = MainActivity1.class.getSimpleName();
   private static final String CLIENT_ID = "XXXXX";
   private static final String CLIENT_SECRET = "XXXXX";
   private EditText ownerEditText;
   private EditText repositoryEditText;
   private ContributorsAdapter adapter;
   private GitHubService service;
+  private Disposable disposable = Disposables.empty();
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -43,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
     final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
     loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
-    final OkHttpClient client = new OkHttpClient.Builder()
-        .addNetworkInterceptor(loggingInterceptor)
-        .addNetworkInterceptor(new GitHubOAuthAppAuthenticationInterceptor(CLIENT_ID, CLIENT_SECRET))
+    final OkHttpClient client = new OkHttpClient.Builder().addNetworkInterceptor(loggingInterceptor)
+        .addNetworkInterceptor(
+            new GitHubOAuthAppAuthenticationInterceptor(CLIENT_ID, CLIENT_SECRET))
         .build();
 
     service = new Retrofit.Builder().baseUrl("https://api.github.com")
@@ -60,10 +66,20 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void onLoadClicked() {
+    final String owner = ownerEditText.getText().toString();
+    final String repository = repositoryEditText.getText().toString();
+    disposable = service.contributors(owner, repository)
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(
+            contributors -> adapter.setContributors(ContributorsListItem.fromJson(contributors)),
+            throwable -> Log.e(TAG,
+                "Failed to fetch the contributors list: " + throwable.getMessage()));
   }
 
   @Override protected void onDestroy() {
     super.onDestroy();
+    disposable.dispose();
   }
 
   private static class ContributorsAdapter
