@@ -5,7 +5,7 @@
   <data>
     <variable
         name="contributor"
-        type="com.hkurokawa.rxjavaexample.Contributor"
+        type="com.hkurokawa.rxjavaexample.ContributorsListItem"
         />
   </data>
   <LinearLayout

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
   private static class ContributorsAdapter
       extends RecyclerView.Adapter<ContributorsListItemViewHolder> {
-    private final List<Contributor> contributors;
+    private final List<ContributorsListItem> contributors;
     private final LayoutInflater inflater;
 
     private ContributorsAdapter(Context context) {
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
       return contributors.size();
     }
 
-    public void setContributors(List<Contributor> contributors) {
+    public void setContributors(List<ContributorsListItem> contributors) {
       this.contributors.clear();
       this.contributors.addAll(contributors);
       notifyDataSetChanged();
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
       this.binding = binding;
     }
 
-    public void bind(Contributor contributor) {
+    public void bind(ContributorsListItem contributor) {
       binding.setContributor(contributor);
       binding.executePendingBindings();
     }
