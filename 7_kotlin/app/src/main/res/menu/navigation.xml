@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_fizz_buzz"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_fizz_buzz" />
+
+    <item
+        android:id="@+id/navigation_functions"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_functions" />
+</menu>
