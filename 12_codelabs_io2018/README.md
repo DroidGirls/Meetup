@@ -21,9 +21,22 @@ https://codelabs.developers.google.com/io2018
 
 ### Build Your First Android App in Kotlin
 * https://codelabs.developers.google.com/codelabs/build-your-first-android-app-kotlin/
+* はじめての Kotlin 的な
+* Android Studio 使い方やプロジェクトの構成の説明もわりと詳しく書かれている
+* Kotlin Android Extensions plugin
+* それなりに時間がかかる
 
 ### Taking Advantage of Kotlin
 * https://codelabs.developers.google.com/codelabs/taking-advantage-of-kotlin/
+* Java to Kotlin converter の使い方
+* Kotlin syntax (data class, lateinit)
+* lambda 式、拡張関数
+* 標準ライブラリの関数
+* Java クラスの継承
+* Nullability
+* Mutability
+* Kotlin Android Extensions plugin
+* それなりに時間がかかる
 
 
 
