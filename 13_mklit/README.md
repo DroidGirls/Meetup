@@ -45,8 +45,13 @@ res/values/strings.xml
 AndroidManifest に Permission を追加する。
 
 ```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    ...>
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
 ```
 
 
