@@ -1,9 +1,13 @@
+## 資料
+
+https://github.com/DroidGirls/Meetup/blob/master/13_mklit/mlkit.pdf
+
 ## 課題1
 
 firebase console https://console.firebase.google.com/ で新しいプロジェクトを作る。
 
- プロジェクト名 : 好きな名前（例 ML Kit Sample）
- 国 / 地域 : 日本
+* プロジェクト名 : 好きな名前（例 ML Kit Sample）
+* 国 / 地域 : 日本
 
 
 ## 課題2
@@ -11,12 +15,12 @@ firebase console https://console.firebase.google.com/ で新しいプロジェ�
 Android Studio で新しいプロジェクトを作り、firebase プロジェクトに Android アプリを追加する。
 （firebase で設定の手順が表示されるので、 google-services.json の設定や dependency の設定もやる）
 
-Application name : 好きな名前（例 ML Kit Sample）
-kotlin を有効にすること
+* Application name : 好きな名前（例 ML Kit Sample）
+* kotlin を有効にすること
 
 ヒント :
 1. firebase console で Project Overview に行く
-2. Android アプリ に Firebase を追加を選択する
+2. 「Android アプリ に Firebase を追加」を選択する
 
 
 ## 課題3
@@ -102,20 +106,20 @@ MainActivity.kt の文字検出成功時の処理に追記する。
 ```kotlin
 detectButton.isEnabled = true
 
-    overlay.clear()
+overlay.clear()
 
-    for (block in texts.blocks) {
-        for (line in block.lines) {
-            for (element in line.elements) {
-                overlay.add(GraphicData(
-                        element.text,
-                        element.boundingBox ?: Rect(),
-                        resources,
-                        Color.RED))
-                Log.d("MainActivity", "${element.text}, ${element.boundingBox}")
-            }
+for (block in texts.blocks) {
+    for (line in block.lines) {
+        for (element in line.elements) {
+            overlay.add(GraphicData(
+                    element.text,
+                    element.boundingBox ?: Rect(),
+                    resources,
+                    Color.RED))
+            Log.d("MainActivity", "${element.text}, ${element.boundingBox}")
         }
     }
+}
 ```
 
 ## 課題6 : 顔検出
@@ -164,11 +168,12 @@ FACE_DETECTION -> {
 ```
 
 option を指定する。
-ModeType では速度優先か正確性優先か指定できる。
-LandmarkType では eyes, ears, nose, cheeks, mouth の位置を判定するか指定できる。
-ClassificationType では笑顔かどうか、目が空いているかどうかを判定するか指定できる。
-MinFaceSize は検出する最小の顔の大きさを画像に対する比率で指定する。
-TrackingEnabled は顔に id を割り振るかどうかを指定できる。
+
+* ModeType では速度優先か正確性優先か指定できる。
+* LandmarkType では eyes, ears, nose, cheeks, mouth の位置を判定するか指定できる。
+* ClassificationType では笑顔かどうか、目が空いているかどうかを判定するか指定できる。
+* MinFaceSize は検出する最小の顔の大きさを画像に対する比率で指定する。
+* TrackingEnabled は顔に id を割り振るかどうかを指定できる。
 
 ```kotlin
 val options = FirebaseVisionFaceDetectorOptions.Builder()
@@ -222,8 +227,7 @@ BARCODE_DETECTION -> {
 }
 ```
 
-option を指定する。
-option では検出するバーコードの種類を制限できる。
+option を指定する。option では検出するバーコードの種類を制限できる。
 
 ```kotlin
 
