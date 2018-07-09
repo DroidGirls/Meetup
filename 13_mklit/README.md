@@ -25,14 +25,16 @@ Android Studio で新しいプロジェクトを作り、firebase プロジェ�
 
 ## 課題3
 
-Meetup/13_mklit/ の
+Meetup/13_mklit/ の以下のファイルをコピーしてくる。
 
+既存の MainActivity と同じところに配置し（MainActivity は置き換え）、必要に応じてパッケージを直す。
 * MainActivity.kt
 * ImagePickFragment.kt
+
+res/layout/ に配置する
 * activity_main.xml
 * fragment_image_pick.xml
 
-をコピーしてくる。
 
 dependency に
 
