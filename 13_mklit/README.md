@@ -42,6 +42,13 @@ res/values/strings.xml
     <string name="button_detect">Detect</string>
 ```
 
+AndroidManifest に Permission を追加する。
+
+```xml
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+
 
 dependency に
 
