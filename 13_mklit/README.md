@@ -16,7 +16,7 @@ Android Studio で新しいプロジェクトを作り、firebase プロジェ�
 （firebase で設定の手順が表示されるので、 google-services.json の設定や dependency の設定もやる）
 
 * Application name : 好きな名前（例 ML Kit Sample）
-* kotlin を有効にすること
+* Include Kotlin Support にチェックを入れること
 
 ヒント :
 1. firebase console で Project Overview に行く
