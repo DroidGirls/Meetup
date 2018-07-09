@@ -35,6 +35,13 @@ res/layout/ に配置する
 * activity_main.xml
 * fragment_image_pick.xml
 
+res/values/strings.xml
+
+```xml
+    <string name="button_change_image">Change Image</string>
+    <string name="button_detect">Detect</string>
+```
+
 
 dependency に
 
