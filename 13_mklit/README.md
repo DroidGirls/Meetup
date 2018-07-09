@@ -120,7 +120,22 @@ activity_main.xml に GraphicOverlay を追加する
 </android.support.constraint.ConstraintLayout>
 ```
 
+
+onImagePicked() に最後で、overlay に targetWidth と targetHeight を指定する。
+
+```kotlin
+    override fun onImagePicked(imageUri: Uri) {
+        ...
+
+        imageView.setImageBitmap(bitmap)
+
+        overlay.targetWidth = targetWidth
+        overlay.targetHeight = targetHeight
+    }
+```
+
 MainActivity.kt の文字検出成功時の処理に追記する。
+
 
 ヒント）
 
