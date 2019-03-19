@@ -1,17 +1,17 @@
-= 課題
+# 課題
 
 - https://google.github.io/dagger/
 
-== 課題0
+## 課題0
 
 プロジェクトを clone して実行する。
 
 
-== 課題1
+## 課題1
 
 MainActivity の内部で SharpSurroundDecorator のインスタンスを生成しているが、Dagger を使って SharpSurroundDecorator のインスタンスを外から inject するようにしよう。
 
-=== 課題1-1
+### 課題1-1
 
 Dagger を dependency に追加する
 
@@ -30,7 +30,7 @@ dependencies {
   ...
 }
 
-=== 課題1-2
+### 課題1-2
 
 SharpSurroundDecorator のインスタンスを provide する AppModule を作る
 
@@ -49,7 +49,7 @@ class AppModule {
 }
 ```
 
-=== 課題1-3
+### 課題1-3
 
 AppModule で構成される AppComponent を作る
 
@@ -64,7 +64,7 @@ interface AppComponent {
 }
 ```
 
-=== 課題1-4
+### 課題1-4
 
 Application を継承した MainApplication クラスを用意して、onCreate() で AppComponent をセットアップする
 
@@ -83,7 +83,7 @@ class MainApplication : Application() {
 }
 ```
 
-=== 課題1-5
+### 課題1-5
 
 MainActivity で SharpSurroundDecorator を inject してもらうようにする
 
@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-=== 課題1-6
+### 課題1-6
 
 AppModule で SharpSurroundDecorator ではなく Decorator 型で返すようにする
 
@@ -127,7 +127,7 @@ class AppModule {
 }
 ```
 
-=== 課題1-7
+### 課題1-7
 
 SharpSurroundDecorator のインスタンス生成を Dagger にお任せする
 
@@ -152,7 +152,7 @@ class AppModule {
 }
 ```
 
-=== 課題1-8
+### 課題1-8
 
 @Binds を使って、SharpSurroundDecorator インスタンスを Decorator として Dagger に割り当てる
 
@@ -182,13 +182,13 @@ interface AppComponent {
 }
 ```
 
-== 課題2
+## 課題2
 
 Dagger Android Support ライブラリを使おう。
 
 - https://google.github.io/dagger/android
 
-=== 課題2-1
+### 課題2-1
 
 Dagger Android Support　を dependency に追加する
 
@@ -208,10 +208,10 @@ dependencies {
 
   ...
 }
+```
 
 
-
-=== 課題2-2
+### 課題2-2
 
 AppComponent に AndroidInjectionModule を追加する
 
@@ -235,7 +235,7 @@ interface AppComponent {
 - AndroidInjector.Factory はどんな interface なのか確認しよう
 - AndroidInjector はどんな interface なのか確認しよう
 
-=== 課題2-3
+### 課題2-3
 
 ActivityBindingModule interface を用意して AppComponent に追加する
 
@@ -262,7 +262,7 @@ interface AppComponent {
 ```
 
 
-=== 課題2-4
+### 課題2-4
 
 ActivityScope アノテーションを自分で定義する
 
@@ -275,7 +275,7 @@ annotation class ActivityScope
 
 
 
-=== 課題2-5
+### 課題2-5
 
 ActivityBindingModule に @ActivityScope と @ContributesAndroidInjector をつけた メソッドを用意して MainActivity　を返すようにする
 
